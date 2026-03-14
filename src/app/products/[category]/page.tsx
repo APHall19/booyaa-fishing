@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { img } from "@/lib/config";
 
 const categoryData: Record<string, { title: string; description: string; products: { name: string; price: string; description: string; image?: string }[] }> = {
   shorts: {
@@ -145,7 +146,7 @@ export default async function CategoryPage({ params }: Props) {
                 <div className="relative aspect-square bg-gray-100">
                   {product.image ? (
                     <Image
-                      src={product.image}
+                      src={img(product.image)}
                       alt={product.name}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"

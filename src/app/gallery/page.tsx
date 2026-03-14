@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { img } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "Gallery",
@@ -48,14 +49,14 @@ export default function GalleryPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
-            {galleryImages.map((img) => (
+            {galleryImages.map((photo) => (
               <div
-                key={img.src}
+                key={photo.src}
                 className="break-inside-avoid rounded-xl overflow-hidden bg-brand-sand"
               >
                 <Image
-                  src={img.src}
-                  alt={img.alt}
+                  src={img(photo.src)}
+                  alt={photo.alt}
                   width={600}
                   height={400}
                   className="w-full h-auto object-contain"

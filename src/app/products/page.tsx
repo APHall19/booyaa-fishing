@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import { img } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "Shop All Products",
@@ -44,7 +45,7 @@ export default function ProductsPage() {
                 className="group relative block aspect-[3/4] rounded-lg overflow-hidden bg-brand-charcoal"
               >
                 <Image
-                  src={cat.image}
+                  src={img(cat.image)}
                   alt={`BOOYAA ${cat.name}`}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"

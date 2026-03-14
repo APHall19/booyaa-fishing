@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { img } from "@/lib/config";
 
 const shopLinks = [
   { name: "Shorts", href: "/products/shorts" },
@@ -36,7 +37,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <Image
-              src="/images/logo-light.png"
+              src={img("/images/logo-light.png")}
               alt="BOOYAA Fishing Wear"
               width={960}
               height={540}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { img } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -13,14 +14,14 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="relative bg-brand-navy py-16 md:py-24 overflow-hidden">
         <Image
-          src="/images/home-collage-2.jpg"
+          src={img("/images/home-collage-2.jpg")}
           alt="BOOYAA Fishing Wear collection"
           fill
           className="object-cover opacity-20"
         />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Image
-            src="/images/logo-light.png"
+            src={img("/images/logo-light.png")}
             alt="BOOYAA logo"
             width={960}
             height={540}

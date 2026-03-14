@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { img } from "@/lib/config";
 
 const productCategories = [
   { name: "Shorts", href: "/products/shorts" },
@@ -42,7 +43,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="shrink-0">
             <Image
-              src="/images/logo-light.png"
+              src={img("/images/logo-light.png")}
               alt="BOOYAA Fishing Wear"
               width={960}
               height={540}

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { img } from "@/lib/config";
 
 const categories = [
   {
@@ -73,7 +74,7 @@ export default function HomePage() {
       {/* Hero */}
       <section className="relative bg-brand-navy overflow-hidden min-h-[70vh] flex items-center">
         <Image
-          src="/images/home-collage-2.jpg"
+          src={img("/images/home-collage-2.jpg")}
           alt=""
           fill
           className="object-cover opacity-15"
@@ -82,7 +83,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-brand-navy/60 via-brand-navy/40 to-brand-navy" />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-28 md:py-40 text-center">
           <Image
-            src="/images/logo-dark.png"
+            src={img("/images/logo-dark.png")}
             alt="BOOYAA Fishing Wear"
             width={800}
             height={450}
@@ -132,7 +133,7 @@ export default function HomePage() {
                 className="group relative block aspect-square rounded-lg overflow-hidden bg-brand-charcoal"
               >
                 <Image
-                  src={cat.image}
+                  src={img(cat.image)}
                   alt={`BOOYAA ${cat.name}`}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -195,7 +196,7 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <p className="text-xs uppercase tracking-[0.3em] text-brand-charcoal/40 font-semibold mb-6">As Featured In</p>
           <Image
-            src="/images/home/field_and_stream_sm.jpg"
+            src={img("/images/home/field_and_stream_sm.jpg")}
             alt="Featured in Field & Stream"
             width={180}
             height={50}
@@ -207,7 +208,7 @@ export default function HomePage() {
       {/* CTA */}
       <section className="relative py-24 md:py-32 overflow-hidden">
         <Image
-          src="/images/photo-collage.jpg"
+          src={img("/images/photo-collage.jpg")}
           alt=""
           fill
           className="object-cover"

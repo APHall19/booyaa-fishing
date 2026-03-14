@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { img } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "Find a Dealer",
@@ -55,7 +56,7 @@ export default function DealersPage() {
 
           <div className="mt-8 text-center">
             <Image
-              src="/images/dealer-logos.gif"
+              src={img("/images/dealer-logos.gif")}
               alt="BOOYAA authorized dealer logos"
               width={500}
               height={80}
