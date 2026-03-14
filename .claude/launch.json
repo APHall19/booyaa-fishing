@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "booyaa-dev",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["next", "dev", "-p", "3001"],
+      "port": 3001,
+      "cwd": "/Users/aidanhall/Desktop/Personal/Claude Projects/booyaa-fishing"
+    }
+  ]
+}
